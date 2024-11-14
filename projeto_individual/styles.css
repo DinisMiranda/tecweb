@@ -22,11 +22,15 @@ header {
 }
 
 /* Estilo dos links de navegação */
+header .nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
 header .nav-links a {
     color: #fff;
     background-color: #555;
     padding: 0.5rem 1rem;
-    margin-right: 1rem;
     text-decoration: none;
     border-radius: 4px;
 }
@@ -35,55 +39,48 @@ header .nav-links a:hover {
     background-color: #8fa201;
 }
 
-/* Título da biblioteca */
+/* Título da biblioteca com imagem */
 .library-title {
-    display: flex; /* Usar flexbox para alinhar os elementos horizontalmente */
-    align-items: center; /* Alinhar verticalmente ao centro */
-    justify-content: center; /* Centralizar horizontalmente */
-    margin: 20px 0; /* Margem superior e inferior */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
 .library-title h1 {
-    font-size: 2em; /* Ajustar o tamanho do título conforme necessário */
-    margin-left: 20px; /* Espaçamento entre a imagem e o título */
-    color: #333; /* Cor do título */
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .library-image {
-    width: 100px; /* Ajustar o tamanho da imagem */
-    height: auto; /* Manter a proporção da imagem */
+    width: 100px;
+    height: auto;
 }
 
-/* Estilização da pesquisa */
+/* Seção de pesquisa */
 .search {
-    padding: 2rem;
     text-align: center;
+    padding: 2rem;
 }
 
 .search-bar {
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .search input[type="text"] {
     padding: 0.5rem;
-    width: 60%;
-    margin-right: 0.5rem;
+    width: 50%;
 }
 
-.search button {
-    padding: 0.5rem 1rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+.search p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-.search button:hover {
-    background-color: #555;
-}
-
-/* Texto mostrando o número de livros e artigos disponíveis */
 .library-info {
     margin-top: 1rem;
     font-size: 1rem;
@@ -92,57 +89,60 @@ header .nav-links a:hover {
 
 /* Resultados */
 .results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 2rem;
-    min-height: 70vh; /* Define uma altura mínima */
-    text-align: center;
-}
-
-.book {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 1rem auto;
-    padding: 1rem;
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .result-container {
-    width: 70%; /* O quadrado ocupa 70% do ecrã */
-    border: 1px solid #ddd; /* Borda fina */
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
-    background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .result-card {
     display: flex;
-    align-items: center;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .book-cover {
-    max-width: 100px; /* Tamanho da imagem da capa */
+    width: 100px;
     border-radius: 4px;
-    margin-right: 1rem;
 }
 
 .book-info {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .book-info h3 {
-    margin: 0 0 0.5rem;
     font-size: 1.2rem;
     color: #333;
+    margin-bottom: 5px;
 }
 
 .book-info p {
-    margin: 0.2rem 0;
-    color: #666;
     font-size: 0.9rem;
+    color: #666;
+    margin: 2px 0;
+}
+
+.book-info a {
+    font-size: 0.9rem;
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.book-info a:hover {
+    text-decoration: underline;
 }
 
 /* Rodapé */
@@ -151,76 +151,5 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilização do corpo */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Estilização do cabeçalho */
-header {
-    background: #52d0d0;
-    color: #ffffff;
-    padding: 10px 0;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: center;
-}
-
-.nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 15px 20px;
-    transition: background 0.3s;
-}
-
-.nav-links a:hover {
-    background: #e8491d;
-}
-
-/* Estilização das seções */
-section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilização do título */
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* Estilização do rodapé */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Estilização de links no rodapé */
-footer p {
-    margin: 0;
+    margin-top: 20px;
 }
