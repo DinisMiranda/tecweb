@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E_Library</title>
+    <title>E_Library</title>  
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -26,8 +26,9 @@
     <!-- Seção de pesquisa, com a barra de busca centralizada -->
     <section class="search">
         <div class="search-bar">
-            <input type="text" placeholder="Título do livro ou autor">
-            <button>Search</button>
+            <!-- Barra de pesquisa simples -->
+            <input type="text" placeholder="Pesquisar título ou autor" disabled>
+            <p>Use Ctrl+F para procurar na página</p> <!-- Informar que a pesquisa será feita manualmente -->
         </div>
         <!-- Texto mostrando o número de livros e artigos disponíveis -->
         <p class="library-info">Livros disponíveis: 1000 | Artigos: 250</p>
@@ -35,24 +36,29 @@
 
     <!-- Seção para exibir os resultados da pesquisa -->
     <section class="results">
-        <h2>Search Results</h2>
-        <div class="book" style="display: none;">
-            <h3>Título do Livro Exemplo</h3>
-            <p>Autor: Autor Exemplo</p>
-        </div>
-    </section>
-
-    <!-- Seção adicional para resultados -->
-    <section class="results">
+        <h2>Resultados de Pesquisa</h2>
         <div class="result-container">
+            <!-- Exemplo de um livro -->
             <div class="result-card">
                 <img src="path/to/capa-livro.jpg" alt="Capa do Livro" class="book-cover">
                 <div class="book-info">
-                    <h3>Título do Livro</h3>
-                    <p>Autor: Nome do Autor</p>
+                    <h3>Título do Livro 1</h3>
+                    <p>Autor: Autor Exemplo</p>
                     <p>Língua: Português</p>
+                    <a href="livros/livro1.pdf" download>Baixar PDF</a> <!-- Link para download -->
                 </div>
             </div>
+
+            <div class="result-card">
+                <img src="path/to/capa-livro2.jpg" alt="Capa do Livro" class="book-cover">
+                <div class="book-info">
+                    <h3>Título do Livro 2</h3>
+                    <p>Autor: Outro Autor</p>
+                    <p>Língua: Português</p>
+                    <a href="livros/livro2.epub" download>Baixar EPUB</a> <!-- Link para download -->
+                </div>
+            </div>
+            <!-- Adicionar mais livros conforme necessário -->
         </div>
     </section>
 
@@ -61,22 +67,5 @@
         <p>&copy; 2024 Biblioteca Online</p>
     </footer>
 
-    <script>
-        const searchButton = document.querySelector('.search button');
-        const searchInput = document.querySelector('.search input[type="text"]');
-        const resultsSection = document.querySelector('.results');
-        const bookExample = resultsSection.querySelector('.book');
-
-        searchButton.addEventListener('click', () => {
-            const searchTerm = searchInput.value.toLowerCase();
-            if (searchTerm === 'livro exemplo') {
-                bookExample.style.display = 'block';
-                bookExample.querySelector('h3').textContent = 'Título do Livro Exemplo';
-                bookExample.querySelector('p').textContent = 'Autor: Autor Exemplo';
-            } else {
-                bookExample.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 </html>
