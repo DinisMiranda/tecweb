@@ -1,0 +1,91 @@
+h2 {
+    margin-bottom: 20px;
+    color: #2c3e50; /* Cor mais suave */
+    font-family: 'Arial', sans-serif; /* Fonte consistente */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf0f1; /* Fundo mais claro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #34495e; /* Cor de texto mais escura */
+    font-family: 'Arial', sans-serif; /* Fonte consistente */
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px; /* Aumentar o padding */
+    margin-bottom: 15px;
+    border: 1px solid #bdc3c7; /* Cor de borda mais suave */
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2980b9; /* Cor de foco mais vibrante */
+}
+
+button {
+    background-color: #2980b9; /* Cor de fundo do botão */
+    color: #fff;
+    padding: 12px; /* Aumentar o padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #3498db; /* Cor de hover mais clara */
+}
+
+button:active {
+    transform: scale(0.98); /* Efeito de clique */
+}
+
+button:focus {
+    outline: 2px solid #1abc9c; /* Adicionar contorno de foco */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.additional-options {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.additional-options a {
+    text-decoration: none;
+    color: #2980b9;
+}
+
+.additional-options a:hover {
+    text-decoration: underline;
+}
