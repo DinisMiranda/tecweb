@@ -15,20 +15,31 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #333;
-    color: #fff;
+    display: flex;
+    justify-content: flex-start;
     padding: 1rem;
-    text-align: center;
+    background-color: #333;
 }
 
-header nav a {
+/* Estilo dos links de navegação */
+header .nav-links a {
     color: #fff;
-    margin: 0 1rem;
+    background-color: #555;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
     text-decoration: none;
+    border-radius: 4px;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+header .nav-links a:hover {
+    background-color: #777;
+}
+
+/* Título da biblioteca */
+.library-title {
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
 }
 
 /* Estilização da pesquisa */
@@ -60,9 +71,20 @@ header nav a:hover {
     background-color: #555;
 }
 
+/* Texto mostrando o número de livros e artigos disponíveis */
+.library-info {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+}
+
 /* Resultados */
 .results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+    min-height: 70vh; /* Define uma altura mínima */
     text-align: center;
 }
 
@@ -72,26 +94,6 @@ header nav a:hover {
     margin: 1rem auto;
     padding: 1rem;
     max-width: 400px;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    /* Adiciona uma sombra opcional para destacar o rodapé */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-}
-.results {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    min-height: 70vh; /* Define uma altura mínima */
 }
 
 .result-container {
@@ -129,4 +131,16 @@ footer {
     margin: 0.2rem 0;
     color: #666;
     font-size: 0.9rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }

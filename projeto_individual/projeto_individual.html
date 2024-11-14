@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <!-- Define o tipo de documento HTML e a linguagem para o português -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E_Library</title>
-    <!-- Conecta o CSS externo para estilizar a página -->
     <link rel="stylesheet" href="projeto_individual.css">
 </head>
 <body>
-    <!-- Cabeçalho do site com título e menu de navegação -->
+    <!-- Cabeçalho do site com menu de navegação no canto superior esquerdo -->
     <header>
-        <h1>E_Library</h1>
-        <nav>
+        <nav class="nav-links">
             <a href="#">Início</a>
             <a href="#">Sobre</a>
             <a href="#">Contato</a>
         </nav>
     </header>
 
-    <!-- Seção de pesquisa, com título e barra de busca centralizada -->
+    <!-- Título "E_Library" centralizado, substituindo "Search Books" -->
+    <section class="library-title">
+        <h1>E_Library</h1>
+    </section>
+
+    <!-- Seção de pesquisa, com a barra de busca centralizada -->
     <section class="search">
-        <h2>Search Books</h2>
         <div class="search-bar">
             <input type="text" placeholder="Título do livro ou autor">
             <button>Search</button>
         </div>
+        <!-- Texto mostrando o número de livros e artigos disponíveis -->
+        <p class="library-info">Livros disponíveis: 1000 | Artigos: 250</p>
     </section>
 
     <!-- Seção para exibir os resultados da pesquisa -->
@@ -37,12 +40,25 @@
         </div>
     </section>
 
-    <!-- Rodapé do site --> 
+    <!-- Seção adicional para resultados -->
+    <section class="results">
+        <div class="result-container">
+            <div class="result-card">
+                <img src="path/to/capa-livro.jpg" alt="Capa do Livro" class="book-cover">
+                <div class="book-info">
+                    <h3>Título do Livro</h3>
+                    <p>Autor: Nome do Autor</p>
+                    <p>Língua: Português</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé do site -->
     <footer>
         <p>&copy; 2024 Biblioteca Online</p>
     </footer>
 
-    <!-- Script JavaScript para controlar a pesquisa -->
     <script>
         const searchButton = document.querySelector('.search button');
         const searchInput = document.querySelector('.search input[type="text"]');
@@ -60,20 +76,5 @@
             }
         });
     </script>
-            <!-- Seção para exibir os resultados da pesquisa -->
-<section class="results">
-    <div class="result-container">
-        <!-- Exemplo de resultado de pesquisa -->
-        <div class="result-card">
-            <img src="path/to/capa-livro.jpg" alt="Capa do Livro" class="book-cover">
-            <div class="book-info">
-                <h3>Título do Livro</h3>
-                <p>Autor: Nome do Autor</p>
-                <p>Língua: Português</p>
-                <!-- Adiciona outras informações relevantes, como o gênero, ano de publicação, etc. -->
-            </div>
-        </div>
-    </div>
-</section>
 </body>
 </html>
