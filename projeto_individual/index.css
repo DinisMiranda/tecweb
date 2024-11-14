@@ -32,14 +32,26 @@ header .nav-links a {
 }
 
 header .nav-links a:hover {
-    background-color: #777;
+    background-color: #8fa201;
 }
 
 /* Título da biblioteca */
 .library-title {
-    text-align: center;
-    margin-top: 2rem;
-    color: #333;
+    display: flex; /* Usar flexbox para alinhar os elementos horizontalmente */
+    align-items: center; /* Alinhar verticalmente ao centro */
+    justify-content: center; /* Centralizar horizontalmente */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+.library-title h1 {
+    font-size: 2em; /* Ajustar o tamanho do título conforme necessário */
+    margin-left: 20px; /* Espaçamento entre a imagem e o título */
+    color: #333; /* Cor do título */
+}
+
+.library-image {
+    width: 100px; /* Ajustar o tamanho da imagem */
+    height: auto; /* Manter a proporção da imagem */
 }
 
 /* Estilização da pesquisa */
@@ -160,7 +172,7 @@ body {
 
 /* Estilização do cabeçalho */
 header {
-    background: #35424a;
+    background: #52d0d0;
     color: #ffffff;
     padding: 10px 0;
 }
