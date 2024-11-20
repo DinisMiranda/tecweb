@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Registro</title>
+    <script>
+        function validarFormulario(event) {
+            const password = document.getElementById("password").value;
+            const regex = /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/; // Deve ter pelo menos uma letra minúscula, uma maiúscula e 8 caracteres
+
+            if (!regex.test(password)) {
+                alert("A palavra-passe deve ter pelo menos 8 caracteres, uma letra maiúscula e uma letra minúscula.");
+                event.preventDefault(); // Impede a submissão do formulário
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulário de Registro</h1>
+    
+    <!-- Formulário -->
+    <form onsubmit="validarFormulario(event)">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Escreva o seu nome" required minlength="3">
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Escreva o seu email" required>
+        </div>
+        
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Escreva a sua idade" required>
+        </div>
+        
+        <div>
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento">
+        </div>
+        
+        <div>
+            <label for="nacionalidade">Nacionalidade:</label>
+            <select id="nacionalidade" name="nacionalidade">
+                <option value="">Selecione a sua nacionalidade</option>
+                <option value="portuguesa">Portuguesa</option>
+                <option value="brasileira">Brasileira</option>
+                <option value="espanhola">Espanhola</option>
+                <option value="francesa">Francesa</option>
+                <option value="italiana">Italiana</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
+        
+        <div>
+            <label for="password">Palavra-passe:</label>
+            <input type="password" id="password" name="password" placeholder="Escreva a sua palavra-passe" required minlength="8">
+        </div>
+        
+        <button type="submit">Submeter formulário</button>
+    </form>
+</body>
+</html>
