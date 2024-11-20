@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Vídeos</title>
+</head>
+<body>
+    <h1>Elementos Multimédia</h1>
+    
+    <!-- Vídeo Local -->
+    <section>
+        <h2>Vídeo Local</h2>
+        <video width="640" height="360" controls>
+            <source src="video/video.mp4" type="video/mp4">
+            O seu browser não suporta o elemento vídeo.
+        </video>
+    </section>
+
+    <!-- Vídeo do YouTube -->
+    <section>
+        <h2>Vídeo do YouTube</h2>
+        <iframe width="640" height="360" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                title="YouTube Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <!-- Define o tipo de documento HTML e a linguagem para o português -->
+    <meta charset="UTF-8">
+    <!-- Configura o site para ser responsivo em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_Library</title>
+    <!-- Conecta o CSS externo para estilizar a página -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho do site com título e menu de navegação -->
+    <header>
+        <h1>E_Library</h1>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção de pesquisa, com título e barra de busca centralizada -->
+    <section class="search">
+        <h2>Search Books</h2>
+        <!-- A barra de pesquisa está agrupada dentro de um div com a classe 'search-bar' para facilitar o alinhamento central -->
+        <div class="search-bar">
+            <input type="text" placeholder="Título do livro ou autor">
+            <button>Search</button>
+        </div>
+    </section>
+
+    <!-- Seção para exibir os resultados da pesquisa -->
+    <section class="results">
+        <h2>Search Results</h2>
+        <!-- Um exemplo de livro que aparece quando há resultados de pesquisa. Inicialmente, ele está oculto (display: none) -->
+        <div class="book" style="display: none;">
+            <h3>Título do Livro Exemplo</h3>
+            <p>Autor: Autor Exemplo</p>
+        </div>
+        <!-- Mais livros podem ser adicionados conforme necessário -->
+    </section>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 Biblioteca Online</p>
+    </footer>
+
+    <!-- Script JavaScript para controlar a pesquisa básica na página -->
+    <script>
+        // Seleciona elementos do HTML para adicionar funcionalidade de busca
+        const searchButton = document.querySelector('.search button'); // botão de pesquisa
+        const searchInput = document.querySelector('.search input[type="text"]'); // campo de texto
+        const resultsSection = document.querySelector('.results'); // seção de resultados
+        const bookExample = resultsSection.querySelector('.book'); // exemplo de livro nos resultados
+
+        // Adiciona evento de clique no botão de pesquisa
+        searchButton.addEventListener('click', () => {
+            const searchTerm = searchInput.value.toLowerCase(); // obtém o texto da pesquisa e converte para minúsculas
+            // Verifica se o termo pesquisado corresponde a um exemplo
+            if (searchTerm === 'livro exemplo') {
+                bookExample.style.display = 'block'; // mostra o exemplo de livro
+                bookExample.querySelector('h3').textContent = 'Título do Livro Exemplo'; // define o título do livro
+                bookExample.querySelector('p').textContent = 'Autor: Autor Exemplo'; // define o autor
+            } else {
+                bookExample.style.display = 'none'; // oculta o livro se o termo não corresponder
+            }
+        });
+    </script>
+</body>
+</html>
