@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Criar Conta</title>
+    <link rel="stylesheet" href="register.css"> <!-- Ficheiro CSS para o registro -->
 </head>
 <body>
     <!-- Navbar com logo e links -->
@@ -17,23 +17,33 @@
         </ul>
     </header>
     
+    <div class="additional-options">
+        <a href="register.html">Criar conta</a> <!-- Alterado para o link para a página de criar conta -->
+    </div>
 
-    <!-- Conteúdo principal da página de login -->
-    <div class="login-container">
-        <div class="login-box">
-            <h2>Iniciar Sessão</h2>
+    <!-- Conteúdo principal da página de registro -->
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Criar Conta</h2>
             <form>
+                <!-- Campo para email -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="Digite seu email" required>
 
+                <!-- Campo para senha -->
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
 
-                <button type="submit">Entrar</button>
+                <!-- Campo para confirmar senha -->
+                <label for="confirm-password">Confirme a Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha" required>
+
+                <!-- Botão de criar conta -->
+                <button type="submit">Criar Conta</button>
             </form>
 
             <div class="additional-options">
-                <a href="#">Esqueceu a senha?</a> | <a href="register.html">Criar conta</a> <!-- Alterado para o link de registro -->
+                <a href="login.html">Já tem conta? Iniciar Sessão</a>
             </div>
         </div>
     </div>
