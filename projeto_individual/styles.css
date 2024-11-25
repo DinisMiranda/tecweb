@@ -131,9 +131,10 @@ header .nav-links a:hover {
 }
 
 .book-cover {
-    width: 80px;
-    border-radius: 4px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .book-info {
