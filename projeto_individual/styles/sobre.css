@@ -122,3 +122,26 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* Seção Missão e Visão */
+.mission-vision {
+    background-color: #ecf0f1;
+    padding: 3rem 1rem;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.mission-vision p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
