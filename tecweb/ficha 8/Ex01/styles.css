@@ -1,0 +1,35 @@
+/* Base Styles */
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section.gallery {
+    padding: 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
+    gap: 60px; /* Espaçamento entre linhas */
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Coluna única */
+        gap: 20px; /* Espaçamento menor */
+    }
+}

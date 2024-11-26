@@ -1,0 +1,46 @@
+/* Base Styles */
+body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+section.product-grid {
+    padding: 80px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    gap: 60px 30px; /* Espaçamento: 60px entre linhas, 30px entre colunas */
+}
+
+.card {
+    text-align: center;
+}
+
+.product-image {
+    width: 295px;
+    border-radius: 20px;
+    transition: transform 0.3s ease; /* Efeito de interação (opcional) */
+}
+
+.product-name {
+    margin: 16px 0 6px 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.product-price {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #000000; /* Cor padrão */
+    transition: color 0.3s ease; /* Transição para o hover */
+}
+
+/* Interação: hover */
+.card:hover .product-price {
+    color: #3563E9;
+}
