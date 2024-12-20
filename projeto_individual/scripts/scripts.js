@@ -5,6 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const books = [
         { title: 'The Way of Kings', author: 'Brandon Sanderson', cover: 'imgs/TheWayOfKings.png' },
         // Add more book objects here
+        { title: 'Words of Radiance', author: 'Brandon Sanderson', cover: 'imgs/WordsOfRadiance.png' },
+        { title: 'Oathbringer', author: 'Brandon Sanderson', cover: 'imgs/Oathbringer.png' },
+        { title: 'Rhythm of War', author: 'Brandon Sanderson', cover: 'imgs/RhythmOfWar.png' },
+        { title: 'The Final Empire', author: 'Brandon Sanderson', cover: 'imgs/TheFinalEmpire.png' },
+        { title: 'The Well of Ascension', author: 'Brandon Sanderson', cover: 'imgs/TheWellOfAscension.png' },
+        { title: 'The Hero of Ages', author: 'Brandon Sanderson', cover: 'imgs/TheHeroOfAges.png' },
+        { title: 'The Alloy of Law', author: 'Brandon Sanderson', cover: 'imgs/TheAlloyOfLaw.png' },
+        { title: 'Shadows of Self', author: 'Brandon Sanderson', cover: 'imgs/ShadowsOfSelf.png' },
+        { title: 'The Bands of Mourning', author: 'Brandon Sanderson', cover: 'imgs/TheBandsOfMourning.png' },
+        { title: 'Secret History', author: 'Brandon Sanderson', cover: 'imgs/SecretHistory.png' },
+        { title: 'Dawnshard', author: 'Brandon Sanderson', cover: 'imgs/Dawnshard.png' },
+        { title: 'Mistborn: The Final Empire', author: 'Brandon Sanderson', cover: 'imgs/MistbornTheFinalEmpire.png' },
+        { title: 'Mistborn: The Well of Ascension', author: 'Brandon Sanderson', cover: 'imgs/MistbornTheWellOfAscension.png' },
+        { title: 'Mistborn: The Hero of Ages', author: 'Brandon Sanderson', cover: 'imgs/MistbornTheHeroOfAges.png' },
+        { title: 'Mistborn: The Alloy of Law', author: 'Brandon Sanderson', cover: 'imgs/MistbornTheAlloyOfLaw.png' },
+        { title: 'Mistborn: Shadows of Self', author: 'Brandon Sanderson', cover: 'imgs/MistbornShadowsOfSelf.png' },
+        { title: 'Mistborn: The Bands of Mourning', author: 'Brandon Sanderson', cover: 'imgs/MistbornTheBandsOfMourning.png' },
     ];
 
     function displayBooks(books) {
